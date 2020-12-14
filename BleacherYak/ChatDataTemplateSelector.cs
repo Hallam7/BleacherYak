@@ -10,7 +10,7 @@ namespace BleacherYak
 		{
 			// Retain instances!
 			this.incomingDataTemplate = new DataTemplate(typeof(IncomingViewCell));
-			this.outgoingDataTemplate = new DataTemplate(typeof(OutgoingViewCell));
+			this.outgoingDataTemplate = new DataTemplate(typeof(OutViewCell));
 		}
 
 		protected override DataTemplate OnSelectTemplate(object item, BindableObject container)

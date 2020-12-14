@@ -9,10 +9,10 @@ using Xamarin.Forms.Xaml;
 
 namespace BleacherYak
 {
-    
-    public partial class OutgoingViewCell : ViewCell
+
+    public partial class OutViewCell : ViewCell
     {
-        public OutgoingViewCell()
+        public OutViewCell()
         {
             InitializeComponent();
         }
