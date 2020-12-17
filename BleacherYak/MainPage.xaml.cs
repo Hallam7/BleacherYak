@@ -16,7 +16,7 @@ namespace BleacherYak
 		{
 			if (string.IsNullOrEmpty(UserName.Text))
 			{
-				await DisplayAlert("Easy Chat", "Please enter username", "OK");
+				await DisplayAlert("BleacherYak", "Please enter username", "OK");
 				return;
 			}
 
