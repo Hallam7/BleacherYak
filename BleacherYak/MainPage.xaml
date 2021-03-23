@@ -2,11 +2,52 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title ="BleacherYak - Account sign up"
-             x:Class="BleacherYak.MainPage">
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" x:Class="BleacherYak.MainPage">
+    <ContentPage.Content>
+      <ScrollView>
+            <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Path Fill="#07081f" Stroke="#07081f"  Aspect="Fill" Data="m126.8675,108.63527l343,0l0,147.02589c-128.5,-58 -207.5,41.01956 -343,24.19026l0,-171.21615z" />
+            <Grid RowSpacing="20" Grid.Row="1" Margin="20,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-    <StackLayout VerticalOptions="Center" 
-        HorizontalOptions="CenterAndExpand">
-        <Entry x:Name="UserName" Placeholder="Please enter Username?" WidthRequest="200"/>
-        <Button Text="Sign up" Clicked="Button_OnClicked"></Button>
-    </StackLayout>
+
+
+
+               
+                <Button Clicked="Button_Clicked" Text="Login With Google" BackgroundColor="#CadetBlue" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="4"/>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                 <Label BackgroundColor="#07081f" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                 <Path Fill="#07081f" HeightRequest="50" WidthRequest="50" Grid.Column="1" Stroke="#07081f"  Aspect="Uniform" Data="m507.879 208.612c2.276 0 4.121 1.845 4.121 4.121v43.267c0 16.194-1.504 32.028-4.389 47.388-22.317 119.309-127.427 209.474-253.416 208.605-141.369-.974-254.507-115.199-254.194-256.57.311-141.117 114.809-255.423 255.999-255.423 69.173 0 131.935 27.442 178.014 72.018 1.664 1.609 1.707 4.261.07 5.897l-61.211 61.211c-1.576 1.576-4.122 1.617-5.737.08-28.921-27.529-68.051-44.43-111.136-44.43-88.971 0-160.616 71.136-161.22 160.105-.607 89.553 71.809 162.342 161.22 162.342 72.545 0 133.903-47.924 154.136-113.835h-150.015c-2.276 0-4.121-1.845-4.121-4.121v-86.535c0-2.276 1.845-4.121 4.121-4.121h247.758z" />
+                    <Label BackgroundColor="#07081f" Grid.Column="2" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                </Grid>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="6">
+                    <Label Text="Sign in with Google" TextColor="#07081f"  />
+                </StackLayout>
+            </Grid>
+            
+        </Grid>
+      </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

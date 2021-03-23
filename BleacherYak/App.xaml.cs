@@ -8,9 +8,13 @@ namespace BleacherYak
     {
         public App()
         {
-            InitializeComponent();
+            Device.SetFlags(new string[] { "Shapes_Experimental" });
 
-            MainPage = new NavigationPage(new MainPage());
+            InitializeComponent();
+            //Root Page:
+            MainPage = new NavigationPage(new MenuPage());
+
+            //MainPage = new NavigationPage(new MenuPage());
         }
 
         protected override void OnStart()
