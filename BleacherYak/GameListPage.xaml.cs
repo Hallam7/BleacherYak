@@ -25,6 +25,8 @@ namespace BleacherYak
         {
             InitializeComponent();
             OnGetList();
+
+
         }
 
         protected async void OnGetList()
@@ -43,13 +45,21 @@ namespace BleacherYak
                     //var myList = JsonConvert.DeserializeObject<List<clsSalesTran>>(inputString)
                     var listofGames = JsonConvert.DeserializeObject<ObservableCollection<GameObject>>(content);
 
-                    Debug.WriteLine(listofGames[0]._home);
+                    //Debug.WriteLine(listofGames[0]._home);
+
 
                     //Display List View
+                    //for (int i = 0; i < 15; i++)
+                    //{
+                        //.Add(new Contacts() { Id = i, Name = "Student" + i.ToString(), Address = "Address" + i.ToString(), Image = "usa.png" });
+                    //}
 
 
 
-
+                    foreach (var _gameID in listofGames)
+                        Debug.WriteLine(listofGames[0]._visitor);
+                        Debug.WriteLine("@");
+                        Debug.WriteLine(listofGames[0]._home);
 
 
 
