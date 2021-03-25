@@ -6,34 +6,32 @@
              mc:Ignorable="d"
              x:Class="BleacherYak.GameListPage">
     <ContentPage.Content>
-       
-
-
-        <ListView
-           x:Name="ListView" ItemsSource="{Binding listofGames}">
+        <ListView x:Name="ListView" IsPullToRefreshEnabled="true" RefreshControlColor="#07081f"
+                  SelectionMode="Single" ItemsSource="{Binding listofGames}">
               <ListView.ItemTemplate>
                  <DataTemplate>
                      <ViewCell>
-                            <StackLayout Orientation="Horizontal" Spacing="10">
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="OpenGame"
+                                     CommandParameter="{Binding .}"
+                                     Text="OpenGame" />
+                                </ViewCell.ContextActions>
 
-                                <Label Text="{Binding _UTCtime}"/>
-                                <Label Text="{Binding _visitor}" />
-                                <Label Text="@" />
-                                <Label Text="{Binding _home}" />
-                                
-
-                            </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Label Text="{Binding _date}"/>
+                            <Label Text="{Binding _UTCtime}"/>
+                            <Label Text="{Binding _visitor}" />
+                            <Label Text="@"/>
+                            <Label Text="{Binding _home}" />
+                         </StackLayout>
+                             
                     </ViewCell>
+                    
                  </DataTemplate>
-
-                
-                      
-
                   
-                </ListView.ItemTemplate>
-         </ListView>
-
-
+                  
+               </ListView.ItemTemplate>
+        </ListView>
         
     </ContentPage.Content>
 </ContentPage>

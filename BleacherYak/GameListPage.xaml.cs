@@ -26,7 +26,13 @@ namespace BleacherYak
             InitializeComponent();
             OnGetList();
 
+        }
 
+        async void OpenGame(object sender, EventArgs args)
+        {
+            //var mi = ((MenuItem)sender);
+            
+            await Navigation.PushAsync(new MenuPage());
         }
 
         protected async void OnGetList()
@@ -42,14 +48,13 @@ namespace BleacherYak
                     var content = await _client.GetStringAsync(Url);
 
                     //Deserialize the JSON data from this line
-                    //var myList = JsonConvert.DeserializeObject<List<clsSalesTran>>(inputString)
                     var listofGames = JsonConvert.DeserializeObject<ObservableCollection<GameObject>>(content);
                     //GameObject[] arrayofGames = listofGames.ToArray();
                     
                     //var listView = new ListView();
                     ListView.ItemsSource = listofGames;
 
-                   
+                   //Testing Output to Application Console:
                     /*for (int i = 0; i < arrayofGames.Length; i++)
                     {
                         Debug.WriteLine(" ");
@@ -60,7 +65,6 @@ namespace BleacherYak
                         Debug.WriteLine(arrayofGames[i]._home);
                         Debug.WriteLine(" ");
                     }*/
-
 
                 }
 
