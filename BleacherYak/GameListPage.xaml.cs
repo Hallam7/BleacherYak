@@ -44,23 +44,22 @@ namespace BleacherYak
                     //Deserialize the JSON data from this line
                     //var myList = JsonConvert.DeserializeObject<List<clsSalesTran>>(inputString)
                     var listofGames = JsonConvert.DeserializeObject<ObservableCollection<GameObject>>(content);
+                    //GameObject[] arrayofGames = listofGames.ToArray();
+                    
+                    //var listView = new ListView();
+                    ListView.ItemsSource = listofGames;
 
-                    //Debug.WriteLine(listofGames[0]._home);
-
-
-                    //Display List View
-                    //for (int i = 0; i < 15; i++)
-                    //{
-                        //.Add(new Contacts() { Id = i, Name = "Student" + i.ToString(), Address = "Address" + i.ToString(), Image = "usa.png" });
-                    //}
-
-
-
-                    foreach (var _gameID in listofGames)
-                        Debug.WriteLine(listofGames[0]._visitor);
+                   
+                    /*for (int i = 0; i < arrayofGames.Length; i++)
+                    {
+                        Debug.WriteLine(" ");
+                        Debug.WriteLine(arrayofGames[i]._visitor);
+                        
                         Debug.WriteLine("@");
-                        Debug.WriteLine(listofGames[0]._home);
-
+                        
+                        Debug.WriteLine(arrayofGames[i]._home);
+                        Debug.WriteLine(" ");
+                    }*/
 
 
                 }

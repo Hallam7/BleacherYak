@@ -6,35 +6,34 @@
              mc:Ignorable="d"
              x:Class="BleacherYak.GameListPage">
     <ContentPage.Content>
-       <ScrollView>
-            <Grid BackgroundColor="#07081f">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="140"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
-            <Path Fill="White" Stroke="White"  Aspect="Fill" Data="m126.8675,108.63527l343,0l0,147.02589c-128.5,-58 -207.5,41.01956 -343,24.19026l0,-171.21615z" />
-            <Grid RowSpacing="20" Grid.Row="1" Margin="20,0,20,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+       
 
 
+        <ListView
+           x:Name="ListView" ItemsSource="{Binding listofGames}">
+              <ListView.ItemTemplate>
+                 <DataTemplate>
+                     <ViewCell>
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+
+                                <Label Text="{Binding _UTCtime}"/>
+                                <Label Text="{Binding _visitor}" />
+                                <Label Text="@" />
+                                <Label Text="{Binding _home}" />
+                                
+
+                            </StackLayout>
+                    </ViewCell>
+                 </DataTemplate>
+
+                
+                      
+
+                  
+                </ListView.ItemTemplate>
+         </ListView>
 
 
-
-
-
-
-
-            </Grid>
-            </Grid>
-        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

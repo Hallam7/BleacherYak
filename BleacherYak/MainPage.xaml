@@ -24,8 +24,8 @@
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
-
+                
+                <Label TextColor="#07081f" FontSize="Title" FontAttributes="Bold"> Bleacher Yak </Label>
 
 
                
