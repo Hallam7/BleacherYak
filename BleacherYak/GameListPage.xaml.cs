@@ -14,7 +14,7 @@ namespace BleacherYak
 {
     public partial class GameListPage : ContentPage
     {
-        private const string Url = "http://10.0.2.2:5000";
+        private const string Url = "https://nbabasketball-api.herokuapp.com/nba";
         // Handles the Web Data Request
         private HttpClient _client = new HttpClient();
         ActivityIndicator activityIndicator;
@@ -25,14 +25,13 @@ namespace BleacherYak
         {
             InitializeComponent();
             OnGetList();
-
         }
 
-        async void OpenGame(object sender, EventArgs args)
+        async void OpenGame(object sender, ItemTappedEventArgs e)
         {
-            //var mi = ((MenuItem)sender);
-            
-            await Navigation.PushAsync(new MenuPage());
+            GameObject game = (GameObject)e.Item;
+            await DisplayAlert("Alert", game._gameID, "OK");
+           
         }
 
         protected async void OnGetList()
