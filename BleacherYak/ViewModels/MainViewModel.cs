@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -26,7 +27,6 @@ namespace BleacherYak.ViewModels
                 OnPropertyChanged();
             }
         }
-
 
         public string Message
         {
@@ -67,8 +67,13 @@ namespace BleacherYak.ViewModels
 
             IsConnected = false;
 
+            //var httpClientHandler = new HttpClientHandler();
+            //if (!sslCheck)
+                //System.Net.ServicePointManager.ServerCertificateValidationCallback = (message, cert, chain, errors) => { return true; }; //no SSL check needed yet  - NOT WORKING!
+                //httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; }; //no SSL check needed yet
+
             hubConnection = new HubConnectionBuilder()
-            .WithUrl($"https://localhost:5001/chatHub")
+            .WithUrl($"https://10.0.2.2:5001/chatHub")
             .Build();
 
 
