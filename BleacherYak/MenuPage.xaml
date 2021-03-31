@@ -62,6 +62,7 @@
                 <Button Clicked="OpenNBA" Text="NBA Fixtures" BackgroundColor="#e3e3e3" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="1"/>
                 <Button Text="NFL Fixtures" BackgroundColor="#e3e3e3" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="2"/>
                 <Button Text="Settings" BackgroundColor="#e3e3e3" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="3"/>
+                <Button Clicked="OpenChat" Text="Test Chat" BackgroundColor="#e3e3e3" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="4"/>
 
 
                 <Grid Grid.Row="5">

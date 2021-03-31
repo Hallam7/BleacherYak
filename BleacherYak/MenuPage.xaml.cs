@@ -16,5 +16,10 @@ namespace BleacherYak
         {
             await Navigation.PushAsync(new GameListPage());
         }
+
+        async void OpenChat(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new ChatPage());
+        }
     }
 }

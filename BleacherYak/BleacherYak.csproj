@@ -20,6 +20,7 @@
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="Xamarin.Auth" Version="1.7.0" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.4" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="OutgoingViewCell.xaml.cs" />
@@ -27,5 +28,8 @@
   <ItemGroup>
     <Folder Include="AppConstant\" />
     <Folder Include="AuthHelpers\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>
