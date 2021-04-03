@@ -67,10 +67,13 @@ namespace BleacherYak.ViewModels
 
             IsConnected = false;
 
-            //var httpClientHandler = new HttpClientHandler();
+            var httpClientHandler = new HttpClientHandler();
+
             //if (!sslCheck)
+            //{ 
                 //System.Net.ServicePointManager.ServerCertificateValidationCallback = (message, cert, chain, errors) => { return true; }; //no SSL check needed yet  - NOT WORKING!
                 //httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; }; //no SSL check needed yet
+            //}
 
             hubConnection = new HubConnectionBuilder()
             .WithUrl($"https://10.0.2.2:5001/chatHub")

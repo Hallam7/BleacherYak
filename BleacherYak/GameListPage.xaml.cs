@@ -15,7 +15,7 @@ namespace BleacherYak
     public partial class GameListPage : ContentPage
     {
         private const string Url = "https://nbabasketball-api.herokuapp.com/nba";
-        // Handles the Web Data Request
+        // Handles the Web Data Request from custom NBA API
         private HttpClient _client = new HttpClient();
         ActivityIndicator activityIndicator;
 
@@ -30,6 +30,9 @@ namespace BleacherYak
         async void OpenGame(object sender, ItemTappedEventArgs e)
         {
             GameObject game = (GameObject)e.Item;
+
+            // testing purposes - display alert with gameID from selected game
+            // use this gameID as the extension for URL to enter specific chatroom
             await DisplayAlert("Alert", game._gameID, "OK");
            
         }
@@ -41,16 +44,16 @@ namespace BleacherYak
                 try
                 {
                     //Activity indicator visibility on
-                    //activityIndicator.IsRunning = true;
+                    activityIndicator.IsRunning = true;
 
                     //Getting JSON data from the Web
                     var content = await _client.GetStringAsync(Url);
 
                     //Deserialize the JSON data from this line
-                    var listofGames = JsonConvert.DeserializeObject<ObservableCollection<GameObject>>(content);
+                    var listofGames = JsonConvert.DeserializeObject
+                        <ObservableCollection<GameObject>>(content);
                     //GameObject[] arrayofGames = listofGames.ToArray();
                     
-                    //var listView = new ListView();
                     ListView.ItemsSource = listofGames;
 
                    //Testing Output to Application Console:
@@ -58,15 +61,11 @@ namespace BleacherYak
                     {
                         Debug.WriteLine(" ");
                         Debug.WriteLine(arrayofGames[i]._visitor);
-                        
                         Debug.WriteLine("@");
-                        
                         Debug.WriteLine(arrayofGames[i]._home);
                         Debug.WriteLine(" ");
                     }*/
-
                 }
-
                 catch (Exception ey)
                 {
                     Debug.WriteLine("" + ey);

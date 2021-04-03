@@ -21,8 +21,5 @@ namespace BleacherYak.AuthHelpers
 		[JsonProperty("family_name")]
 		public string FamilyName { get; set; }
 
-		[JsonProperty("link")]
-		public string Link { get; set; }
-
 	}
 }

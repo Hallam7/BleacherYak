@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title ="BleacherYak - Account sign up"
+             Title ="BleacherYak - Account Sign In"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" x:Class="BleacherYak.MainPage">
@@ -28,8 +28,8 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
-                <Label TextColor="#07081f" FontSize="Title" FontAttributes="Bold"> Bleacher Yak </Label>
-
+                <Label TextColor="#07081f" HorizontalTextAlignment="Center" FontSize="Title" FontAttributes="Bold"> Bleacher Yak </Label>
+                <Label TextColor="#07081f" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Text="Chatrooms for Sports Gambling"   />
 
                 <Button Clicked="SignIn_Button" Text="Sign in with Google" BackgroundColor = "#e3e3e3" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="4"/>
                 <Grid Grid.Row="5">

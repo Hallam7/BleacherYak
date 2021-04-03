@@ -39,15 +39,12 @@ namespace BleacherYak
 
 			account = store.FindAccountsForService(AppConstant.Constants.AppName).FirstOrDefault();
 
-			var authenticator = new OAuth2Authenticator(
-				clientId,
-				null,
-				AppConstant.Constants.Scope,
+			var authenticator = new OAuth2Authenticator
+				(clientId,null,AppConstant.Constants.Scope,
 				new Uri(AppConstant.Constants.AuthorizeUrl),
 				new Uri(redirectUri),
 				new Uri(AppConstant.Constants.AccessTokenUrl),
-				null,
-				true);
+				null, true);
 
 			authenticator.Completed += OnAuthCompleted;
 			authenticator.Error += OnAuthError;

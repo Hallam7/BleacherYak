@@ -16,7 +16,7 @@ namespace BleacherYak
 
             InitializeComponent();
             //Root Page:
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MenuPage());
 
             //MainPage = new NavigationPage(new TestMainPage());
         }

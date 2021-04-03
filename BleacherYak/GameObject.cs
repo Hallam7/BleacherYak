@@ -8,8 +8,6 @@ namespace BleacherYak
         private string home;
         private string visitor;
         private string UTCtime;
-        //private Drawable logoAway;
-        //private Drawable logoHome;
 
         // Constructor
         public GameObject(string gameID, string date, string home, string visitor, string UTCtime)
