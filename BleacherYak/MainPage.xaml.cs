@@ -19,7 +19,7 @@ namespace BleacherYak
 			store = AccountStore.Create();
 		}
 
-		void Button_Clicked(System.Object sender, System.EventArgs e)
+		void SignIn_Button(System.Object sender, System.EventArgs e)
 		{
 			string clientId = null;
 			string redirectUri = null;
@@ -56,7 +56,6 @@ namespace BleacherYak
 
 			var presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
 			presenter.Login(authenticator);
-
 		}
 
 		async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs e)
@@ -71,7 +70,7 @@ namespace BleacherYak
 			User user = null;
 			if (e.IsAuthenticated)
 			{
-				// If the user is authenticated, request their basic user data from Google
+				// If the user is authenticated, request basic user data from Google
 				// UserInfoUrl = https://www.googleapis.com/oauth2/v2/userinfo
 				var request = new OAuth2Request("GET", new Uri(AppConstant.Constants.UserInfoUrl), null, e.Account);
 				var response = await request.GetResponseAsync();
@@ -86,7 +85,6 @@ namespace BleacherYak
 				if (user != null)
 				{
 					App.Current.MainPage = new NavigationPage(new MenuPage());
-
 				}
 
 				//await store.SaveAsync(account = e.Account, AppConstant.Constants.AppName);

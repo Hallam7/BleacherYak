@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace BleacherYak
+namespace BleacherYak.CustomCells
 {
     public partial class IncomingViewCell : ViewCell
     {

@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BleacherYak.IncomingViewCell">
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+           x:Class="BleacherYak.CustomCells.IncomingViewCell">
     <Grid ColumnSpacing="2" Padding="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*">

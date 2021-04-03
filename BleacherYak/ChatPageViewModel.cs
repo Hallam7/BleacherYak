@@ -16,8 +16,11 @@ namespace BleacherYak
 {
     public sealed class ChatPageViewModel : INotifyPropertyChanged
     {
+        //string gameID;
+        // string gameID in below (   )
         public ChatPageViewModel(string username)
         {
+            //this.gameID = gameID;
             client = new ClientWebSocket();
             cts = new CancellationTokenSource();
             messages = new ObservableCollection<Message>();
@@ -53,13 +56,14 @@ namespace BleacherYak
         async void ConnectToServerAsync()
         {
 
-#if __IOS__
-            await client.ConnectAsync(new Uri("ws://localhost:5000"), cts.Token);
-#else
-            await client.ConnectAsync(new Uri("ws://10.0.2.2:5000"), cts.Token);
-#endif
 
-            UpdateClientState();
+            #if __IOS__
+                        await client.ConnectAsync(new Uri("ws://localhost:5000"), cts.Token);
+            #else
+                        await client.ConnectAsync(new Uri("ws://10.0.2.2:5000"), cts.Token);
+            #endif
+
+                        UpdateClientState();
 
             await Task.Factory.StartNew(async () =>
             {

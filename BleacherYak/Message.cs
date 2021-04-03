@@ -17,3 +17,4 @@ namespace BleacherYak
         public string UserId { get; set; }
     }
 }
+

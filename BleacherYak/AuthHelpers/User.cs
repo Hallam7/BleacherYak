@@ -12,9 +12,6 @@ namespace BleacherYak.AuthHelpers
 		[JsonProperty("email")]
 		public string Email { get; set; }
 
-		[JsonProperty("verified_email")]
-		public bool VerifiedEmail { get; set; }
-
 		[JsonProperty("name")]
 		public string Name { get; set; }
 
@@ -27,10 +24,5 @@ namespace BleacherYak.AuthHelpers
 		[JsonProperty("link")]
 		public string Link { get; set; }
 
-		[JsonProperty("picture")]
-		public string Picture { get; set; }
-
-		[JsonProperty("gender")]
-		public string Gender { get; set; }
 	}
 }

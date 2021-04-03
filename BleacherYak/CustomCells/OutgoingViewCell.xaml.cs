@@ -5,14 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-namespace BleacherYak
+namespace BleacherYak.CustomCells
 {
-
-    public partial class OutViewCell : ViewCell
+    public partial class OutgoingViewCell : ViewCell
     {
-        public OutViewCell()
+        public OutgoingViewCell()
         {
             InitializeComponent();
         }

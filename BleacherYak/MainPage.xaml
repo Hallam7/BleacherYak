@@ -15,7 +15,8 @@
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
 
-            <Path Fill="#07081f" Stroke="#07081f"  Aspect="Fill" Data="m126.8675,108.63527l343,0l0,147.02589c-128.5,-58 -207.5,41.01956 -343,24.19026l0,-171.21615z" />
+            <Path Fill="#07081f" Stroke="#07081f"  Aspect="Fill"
+                  Data="m126.8675,108.63527l343,0l0,147.02589c-128.5,-58 -207.5,41.01956 -343,24.19026l0,-171.21615z" />
             <Grid RowSpacing="20" Grid.Row="1" Margin="20,0,20,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -30,7 +31,7 @@
                 <Label TextColor="#07081f" FontSize="Title" FontAttributes="Bold"> Bleacher Yak </Label>
 
 
-                <Button Clicked="Button_Clicked" Text="Login With Google" BackgroundColor="#CadetBlue" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="4"/>
+                <Button Clicked="SignIn_Button" Text="Sign in with Google" BackgroundColor = "#e3e3e3" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="4"/>
                 <Grid Grid.Row="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>

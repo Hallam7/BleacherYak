@@ -9,8 +9,8 @@ namespace BleacherYak
 		public MyDataTemplateSelector()
 		{
 			// Retain instances!
-			this.incomingDataTemplate = new DataTemplate(typeof(IncomingViewCell));
-			this.outgoingDataTemplate = new DataTemplate(typeof(OutViewCell));
+			this.incomingDataTemplate = new DataTemplate(typeof(CustomCells.IncomingViewCell));
+			this.outgoingDataTemplate = new DataTemplate(typeof(CustomCells.OutgoingViewCell));
 		}
 
 		protected override DataTemplate OnSelectTemplate(object item, BindableObject container)

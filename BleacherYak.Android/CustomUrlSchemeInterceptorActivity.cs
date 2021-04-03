@@ -27,7 +27,12 @@ namespace BleacherYak.Droid
             // Load redirectUrl page
             AuthenticationState.Authenticator.OnPageLoading(uri);
 
-            Finish();
+            //Finish();
+
+            var intent = new Intent(this, typeof(MainActivity));
+            intent.SetFlags(ActivityFlags.ClearTop | ActivityFlags.SingleTop);
+            StartActivity(intent);
+            this.Finish();
         }
     }
 }
