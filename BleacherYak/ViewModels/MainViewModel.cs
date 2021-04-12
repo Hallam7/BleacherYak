@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Net;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -69,10 +70,18 @@ namespace BleacherYak.ViewModels
 
             var httpClientHandler = new HttpClientHandler();
 
-            //if (!sslCheck)
+            ServicePointManager.ServerCertificateValidationCallback +=
+                (sender, certificate, chain, errors) => {
+                    return true;
+                };
+
+
+            //if (!SslCheck)
             //{ 
-                //System.Net.ServicePointManager.ServerCertificateValidationCallback = (message, cert, chain, errors) => { return true; }; //no SSL check needed yet  - NOT WORKING!
-                //httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; }; //no SSL check needed yet
+            // System.Net.ServicePointManager.ServerCertificateValidationCallback = (message, cert, chain, errors) => { return true; };
+            //no SSL check needed yet  - NOT WORKING!
+            // httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
+            //no SSL check needed yet
             //}
 
             hubConnection = new HubConnectionBuilder()

@@ -44,7 +44,7 @@ namespace BleacherYak
                 try
                 {
                     //Activity indicator visibility on
-                    activityIndicator.IsRunning = true;
+                    //activityIndicator.IsRunning = true;
 
                     //Getting JSON data from the Web
                     var content = await _client.GetStringAsync(Url);
