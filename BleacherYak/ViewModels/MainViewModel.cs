@@ -68,12 +68,16 @@ namespace BleacherYak.ViewModels
 
             IsConnected = false;
 
-            var httpClientHandler = new HttpClientHandler();
+            var handler = new HttpClientHandler();
+            handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
 
-            ServicePointManager.ServerCertificateValidationCallback +=
-                (sender, certificate, chain, errors) => {
-                    return true;
-                };
+            var baseAddress = new Uri("https://10.0.2.2:5001/chatHub");
+            var client = new HttpClient(handler) { BaseAddress = baseAddress };
+            var result = client.GetAsync("");
+
+
+            //var httpClientHandler = new HttpClientHandler();
+            //ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, errors) => { return true; };
 
 
             //if (!SslCheck)
