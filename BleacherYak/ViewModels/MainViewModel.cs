@@ -71,7 +71,8 @@ namespace BleacherYak.ViewModels
             var handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
 
-            var baseAddress = new Uri("https://10.0.2.2:5001/chatHub");
+            var baseAddress = new Uri("https://20.50.2.4:80/chatHub");
+            //var baseAddress = new Uri("https://10.0.2.2:5001/chatHub");
             var client = new HttpClient(handler) { BaseAddress = baseAddress };
             var result = client.GetAsync("");
 
@@ -89,7 +90,8 @@ namespace BleacherYak.ViewModels
             //}
 
             hubConnection = new HubConnectionBuilder()
-            .WithUrl($"https://10.0.2.2:5001/chatHub")
+            //.WithUrl($"https://10.0.2.2:5001/chatHub")
+            .WithUrl($"https://20.50.2.4:80/chatHub")
             .Build();
 
 

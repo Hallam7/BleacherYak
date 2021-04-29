@@ -56,14 +56,14 @@ namespace BleacherYak
         async void ConnectToServerAsync()
         {
 
+#if __IOS__
+                        await client.ConnectAsync(new Uri("ws://20.50.2.4:80"), cts.Token);
+    #else
+                        await client.ConnectAsync(new Uri("ws://20.50.2.4:80"), cts.Token);
+                #endif
 
-            #if __IOS__
-                        await client.ConnectAsync(new Uri("ws://localhost:5000"), cts.Token);
-            #else
-                        await client.ConnectAsync(new Uri("ws://10.0.2.2:5000"), cts.Token);
-            #endif
 
-                        UpdateClientState();
+            UpdateClientState();
 
             await Task.Factory.StartNew(async () =>
             {

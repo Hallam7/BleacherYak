@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BleacherYak.NFLGamesListPage">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <Grid BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+            <Path Fill="#07081f" Stroke="#07081f"  Aspect="Fill"
+                  Data="m126.8675,108.63527l343,0l0,147.02589c-128.5,-58 -207.5,41.01956 -343,24.19026l0,-171.21615z" />
+            <Grid RowSpacing="20" Grid.Row="1" Margin="20,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Label TextColor="#07081f" HorizontalTextAlignment="Center" FontSize="Title" FontAttributes="Bold"> Bleacher Yak </Label>
+                <Label TextColor="#07081f" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Text="Chatrooms for Sports Gambling"/>
+
+                   <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                 <Label BackgroundColor="#07081f" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                 <Path Fill="#07081f" HeightRequest="50" WidthRequest="50" Grid.Column="1" Stroke="#07081f"  Aspect="Uniform" Data="M511.443,170.242c3.338-81.176-9.084-145.533-9.614-148.232c-1.175-5.979-5.849-10.653-11.828-11.827   C487.886,9.767,437.416,0.006,369.52,0.006c-15.763,0-32.63,0.544-50.127,1.904c-0.387,0.017-0.772,0.044-1.157,0.091   c-25.54,2.035-52.398,5.826-79.128,12.222c-0.885,0.131-1.759,0.341-2.614,0.63C183.669,27.835,131.541,51.118,91.328,91.332   c-30.84,30.84-54.253,71.263-69.587,120.146c-10.091,32.169-16.71,68.08-19.769,106.998c-0.015,0.14-0.021,0.281-0.032,0.422   c-0.586,7.518-1.052,15.136-1.371,22.874c-3.338,81.176,9.085,145.532,9.615,148.232c1.175,5.979,5.849,10.652,11.828,11.827   c2.115,0.416,52.584,10.175,120.48,10.176c0.005,0,0.007,0,0.012,0c15.818,0,32.746-0.547,50.308-1.918   c0.292-0.016,0.584-0.035,0.875-0.068c25.566-2.033,52.456-5.826,79.217-12.229c0.886-0.131,1.761-0.341,2.616-0.631   c52.823-12.981,104.951-36.266,145.165-76.478c30.84-30.84,54.253-71.263,69.587-120.145   c10.086-32.153,16.704-68.044,19.764-106.939c0.022-0.203,0.033-0.405,0.047-0.609   C510.663,185.512,511.127,177.936,511.443,170.242z M314.368,32.425l165.213,165.216c-1.257,13.769-3.092,28.142-5.693,42.766   L271.559,38.077C286,35.525,300.36,33.692,314.368,32.425z M474.11,37.906c3.047,19.485,8.96,65.143,7.724,119.562L354.547,30.178   c5.091-0.117,10.088-0.172,14.973-0.172C417.115,30.006,456.407,35.14,474.11,37.906z M197.646,479.588L32.43,314.371   c1.256-13.761,3.094-28.137,5.696-42.766l202.328,202.33C226.013,476.488,211.653,478.321,197.646,479.588z M142.492,482.006   c-47.591-0.001-86.878-5.134-104.584-7.898c-3.043-19.514-8.955-65.252-7.728-119.56l127.287,127.286   C152.375,481.951,147.377,482.006,142.492,482.006z M399.472,399.468c-34.107,34.105-78.45,54.739-124.213,66.847L45.775,236.828   c11.964-45.116,32.434-89.951,66.766-124.283c34.105-34.105,78.449-54.739,124.213-66.847L466.24,275.185   C454.271,320.321,433.797,365.142,399.472,399.468z" />
+                    <Label BackgroundColor="#07081f" Grid.Column="2" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                </Grid>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="6">
+                    <Label Text="NFL 2021/22 fixtures coming soon" TextColor="#07081f"  />
+                </StackLayout>
+            </Grid>
+            
+        </Grid>
+      </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

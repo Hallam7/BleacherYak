@@ -49,6 +49,14 @@
 				<string>com.googleusercontent.apps.758862578489-n1orntf5e5vstl64t9pmsd14ief2pud2</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>iOS URL scheme</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.758862578489-n1orntf5e5vstl64t9pmsd14ief2pud2</string>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

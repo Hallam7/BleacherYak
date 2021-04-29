@@ -17,6 +17,16 @@ namespace BleacherYak
             await Navigation.PushAsync(new GameListPage());
         }
 
+        async void OpenNFL(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new NFLGamesListPage());
+        }
+
+        async void OpenSettings(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new SettingsPage());
+        }
+
         async void OpenChat(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new ChatPage());
